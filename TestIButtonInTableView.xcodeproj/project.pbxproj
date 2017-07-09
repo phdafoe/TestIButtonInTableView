@@ -18,6 +18,7 @@
 		B4BB1EB51F1288BD00F80C1D /* as1.png in Resources */ = {isa = PBXBuildFile; fileRef = B4BB1EB11F1288BD00F80C1D /* as1.png */; };
 		B4BB1EB61F1288BD00F80C1D /* ramos.png in Resources */ = {isa = PBXBuildFile; fileRef = B4BB1EB21F1288BD00F80C1D /* ramos.png */; };
 		B4BB1EB71F1288BD00F80C1D /* RM.png in Resources */ = {isa = PBXBuildFile; fileRef = B4BB1EB31F1288BD00F80C1D /* RM.png */; };
+		B4BB1EB91F129C1700F80C1D /* SRHomePortadasDetalleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BB1EB81F129C1700F80C1D /* SRHomePortadasDetalleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		B4BB1EB11F1288BD00F80C1D /* as1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = as1.png; sourceTree = "<group>"; };
 		B4BB1EB21F1288BD00F80C1D /* ramos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ramos.png; sourceTree = "<group>"; };
 		B4BB1EB31F1288BD00F80C1D /* RM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RM.png; sourceTree = "<group>"; };
+		B4BB1EB81F129C1700F80C1D /* SRHomePortadasDetalleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRHomePortadasDetalleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				B4BB1EAD1F12854300F80C1D /* SRDestacadoPrensaCustomCell.xib */,
 				B4BB1E9A1F12851D00F80C1D /* AppDelegate.swift */,
 				B4BB1E9C1F12851D00F80C1D /* ViewController.swift */,
+				B4BB1EB81F129C1700F80C1D /* SRHomePortadasDetalleViewController.swift */,
 				B4BB1E9E1F12851D00F80C1D /* Main.storyboard */,
 				B4BB1EA11F12851D00F80C1D /* Assets.xcassets */,
 				B4BB1EA31F12851D00F80C1D /* LaunchScreen.storyboard */,
@@ -162,6 +165,7 @@
 			files = (
 				B4BB1E9D1F12851D00F80C1D /* ViewController.swift in Sources */,
 				B4BB1EAE1F12854300F80C1D /* SRDestacadoPrensaCustomCell.swift in Sources */,
+				B4BB1EB91F129C1700F80C1D /* SRHomePortadasDetalleViewController.swift in Sources */,
 				B4BB1E9B1F12851D00F80C1D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

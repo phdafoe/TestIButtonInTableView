@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hn8-pD-QnZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Luz-La-OY5">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -32,10 +32,112 @@
                             <outlet property="delegate" destination="hn8-pD-QnZ" id="akv-jm-fum"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="lCE-qe-434"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ygf-XM-dUY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="116" y="155"/>
+            <point key="canvasLocation" x="1055.2" y="154.27286356821591"/>
+        </scene>
+        <!--Home Portadas Detalle View Controller-->
+        <scene sceneID="29c-E2-ogg">
+            <objects>
+                <viewController storyboardIdentifier="HomePortadasDetalleViewController" id="dJP-eq-ufP" customClass="SRHomePortadasDetalleViewController" customModule="TestIButtonInTableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ryw-Rp-qXz"/>
+                        <viewControllerLayoutGuide type="bottom" id="Opr-GU-SYd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wpl-Qb-KYy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="2" maximumZoomScale="2" translatesAutoresizingMaskIntoConstraints="NO" id="CFp-Vn-Wya">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4lX-7A-oY6">
+                                        <rect key="frame" x="0.0" y="77" width="375" height="590"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="590" id="b5M-6K-jkJ"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="4lX-7A-oY6" secondAttribute="trailing" id="6F0-LO-NRY"/>
+                                    <constraint firstItem="4lX-7A-oY6" firstAttribute="top" secondItem="CFp-Vn-Wya" secondAttribute="top" constant="77" id="A8C-gI-tMA"/>
+                                    <constraint firstAttribute="bottom" secondItem="4lX-7A-oY6" secondAttribute="bottom" id="HnA-YU-iWI"/>
+                                    <constraint firstItem="4lX-7A-oY6" firstAttribute="leading" secondItem="CFp-Vn-Wya" secondAttribute="leading" id="h9s-Wf-C0N"/>
+                                    <constraint firstItem="4lX-7A-oY6" firstAttribute="centerX" secondItem="CFp-Vn-Wya" secondAttribute="centerX" id="kWp-g7-xSG"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="dJP-eq-ufP" id="Ncj-DV-s7K"/>
+                                </connections>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0RG-Ea-RGU">
+                                <rect key="frame" x="10" y="30" width="172" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="172" id="eac-wd-dJu"/>
+                                    <constraint firstAttribute="height" constant="27" id="oHq-LJ-a0D"/>
+                                </constraints>
+                                <state key="normal" image="iconoHazClickAqui"/>
+                                <connections>
+                                    <action selector="muestraMedio:" destination="dJP-eq-ufP" eventType="touchUpInside" id="sxL-L0-jed"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1m-Nx-ek8">
+                                <rect key="frame" x="327" y="20" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="RgL-tP-MHg"/>
+                                    <constraint firstAttribute="height" constant="40" id="a3R-AG-cQ1"/>
+                                </constraints>
+                                <state key="normal" image="botonCerrarImagen"/>
+                                <connections>
+                                    <action selector="ocultarVC:" destination="dJP-eq-ufP" eventType="touchUpInside" id="Lh7-6K-Uce"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0RG-Ea-RGU" firstAttribute="leading" secondItem="wpl-Qb-KYy" secondAttribute="leading" constant="10" id="AxY-tc-Gss"/>
+                            <constraint firstAttribute="trailing" secondItem="CFp-Vn-Wya" secondAttribute="trailing" id="SPi-Eg-Ud3"/>
+                            <constraint firstItem="CFp-Vn-Wya" firstAttribute="leading" secondItem="wpl-Qb-KYy" secondAttribute="leading" id="UUd-Qb-Rcq"/>
+                            <constraint firstItem="0RG-Ea-RGU" firstAttribute="top" secondItem="ryw-Rp-qXz" secondAttribute="bottom" constant="10" id="eOc-aL-FyM"/>
+                            <constraint firstAttribute="trailing" secondItem="f1m-Nx-ek8" secondAttribute="trailing" constant="8" id="eYm-Z2-tbw"/>
+                            <constraint firstItem="f1m-Nx-ek8" firstAttribute="top" secondItem="ryw-Rp-qXz" secondAttribute="bottom" id="pWJ-SG-V08"/>
+                            <constraint firstItem="Opr-GU-SYd" firstAttribute="top" secondItem="CFp-Vn-Wya" secondAttribute="bottom" id="wKA-DO-5NO"/>
+                            <constraint firstItem="CFp-Vn-Wya" firstAttribute="top" secondItem="wpl-Qb-KYy" secondAttribute="top" id="zfd-YY-zNm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="pIC-dH-xcu"/>
+                    <connections>
+                        <outlet property="mostrarMedioBTN" destination="0RG-Ea-RGU" id="ds0-dU-1md"/>
+                        <outlet property="myDetalleFotoMuro" destination="4lX-7A-oY6" id="BCs-aD-Im9"/>
+                        <outlet property="myScrollView" destination="CFp-Vn-Wya" id="kP5-aN-nUM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mzh-NY-FJb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2439" y="154"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VIe-ik-l93">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Luz-La-OY5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9RF-Lp-tmh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hn8-pD-QnZ" kind="relationship" relationship="rootViewController" id="0ov-KZ-pOk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nMi-UX-cI8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="154.27286356821591"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="botonCerrarImagen" width="35" height="35"/>
+        <image name="iconoHazClickAqui" width="147" height="22"/>
+    </resources>
 </document>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SystemConfiguration
 
 class ViewController: UITableViewController {
     
@@ -15,11 +16,21 @@ class ViewController: UITableViewController {
     var arrayImagenes = ["ramos.png", "AM.png", "RM.png"]
     var arrayMedio = ["as1.png", "as1.png", "as1.png"]
     
+    var download = true
+    let processInfo = ProcessInfo.processInfo
     
-
+       
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //modo de energia
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(self.customChangePowerMode(_:)),
+                                               name: NSNotification.Name.NSProcessInfoPowerStateDidChange,
+                                               object: nil)
+        
+        
+        //Registro de una celda
         tableView.register(UINib(nibName: "SRDestacadoPrensaCustomCell", bundle: nil), forCellReuseIdentifier: "DestacadoPrensaCustomCell")
         
         
@@ -55,9 +66,24 @@ class ViewController: UITableViewController {
         return customCell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let detalleVC = self.storyboard?.instantiateViewController(withIdentifier: "HomePortadasDetalleViewController") as! SRHomePortadasDetalleViewController
+        
+        detalleVC.imagenData = UIImage(named: arrayImagenes[indexPath.row])
+        detalleVC.medioData = "http://www.as.com"
+        present(detalleVC, animated: true, completion: nil)
+        print("Seleccionado \(arrayImagenes[indexPath.row])")
+        
+    }
+    
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 125
     }
+    
+    
+    
     
     
     func muestraAlerta(_ sender : UIButton){
@@ -67,6 +93,31 @@ class ViewController: UITableViewController {
         present(alertView, animated: true, completion: nil)
     }
     
+    
+    
+    func customChangePowerMode(_ notification : Notification){
+        if ProcessInfo.processInfo.isLowPowerModeEnabled {
+            let state = ProcessInfo.processInfo.isLowPowerModeEnabled
+            print("\(state)")
+        } else {
+            let state = ProcessInfo.processInfo.isLowPowerModeEnabled
+            print("\(state)")
+            downloadVideo()
+        }
+        
+    }
+    
+    func downloadVideo(){
+        let url = NSURL(string: "http://www.andresocampo.com")
+        if let urlDes = url{
+            if ProcessInfo.processInfo.isLowPowerModeEnabled {
+                print("\(urlDes)")
+            } else {
+                print("\(urlDes)")
+            }
+        }
+    }
+   
     
 
 }
